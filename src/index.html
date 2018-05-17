@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Bible Search</title>
+
+    <link rel="stylesheet" href="./css/main.css">
+    <script src="./js/lodash.min.js"></script>
+  </head>
+
+  <body>
+    <div id="app"></div>
+  </body>
+
+  <script>
+    import Vue from 'vue';
+    import Search from './search';
+    var elasticlunr = require('elasticlunr');
+    
+    const app = new Vue(Search).$mount('#app');
+  </script>
+</html>

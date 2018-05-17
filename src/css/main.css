@@ -1,0 +1,59 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 650px;
+    overflow: hidden;
+}
+
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+div.import-db, div.loading-dialog {
+    padding: 15px;
+    margin-bottom: 15px;
+    border: 0 solid #ddd;
+    border-bottom-width: 1px;
+}
+
+div.import-db form label {
+    font-weight: 600;
+    display: block;
+    margin-bottom: 10px;
+}
+
+div.import-db form #fileupload {
+    padding: 15px 20px;
+    border: 1px solid #eee;
+    width: calc(100% - 40px);
+}
+
+form.search-form {
+    margin-bottom: 15px;
+}
+
+form.search-form #search-box {
+    width: calc(100% - 20px);
+    height: 40px;
+    padding: 0 10px;
+    border: 0 solid #ddd;
+    border-width: 1px 0px;
+}
+
+div.results {
+    padding: 0;
+    overflow-y: auto;
+    height: 470px;
+    margin-bottom: 0;
+    border: 0 solid #ddd;
+    border-top-width: 1px;
+}
+
+div.result {
+    padding: 15px;
+    border-bottom: 1px solid #bbb;
+}
+
+div.result span.result-verse-number {
+    font-weight: 600;
+}
