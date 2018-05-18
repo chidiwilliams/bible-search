@@ -1,8 +1,8 @@
 {
   "name": "bible-search",
-  "productName": "bible-search",
+  "productName": "Bible Search",
   "version": "1.0.0",
-  "description": "My Electron application description",
+  "description": "Lightning-fast search through the KJV Bible",
   "main": "src/index.js",
   "scripts": {
     "start": "electron-forge start",

@@ -75,6 +75,7 @@ export default {
       var results = this.elastic.search(this.query, {
         expand: true
       });
+      
       results = results.slice(0, 10);
 
       this.results = [];
