@@ -70,6 +70,7 @@ export default {
 
       return book + ' ' + chapterNo + ':' + verseNo;
     },
+    
     queryData() {
       var results = this.elastic.search(this.query, {
         expand: true
