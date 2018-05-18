@@ -16,10 +16,7 @@ const createWindow = async () => {
     width: 700,
     height: 700,
     resizable: false,
-    webPreferences: {
-      // devTools: false,
-    },
-    title: 'Bible Search',
+    title: 'Bible Search'
   });
 
   // and load the index.html of the app.

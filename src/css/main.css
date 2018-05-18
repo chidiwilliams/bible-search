@@ -3,6 +3,7 @@ html, body {
     padding: 0;
     height: 650px;
     overflow: hidden;
+    font-size: 14px;
 }
 
 * {
@@ -33,9 +34,9 @@ form.search-form {
 }
 
 form.search-form #search-box {
-    width: calc(100% - 20px);
+    width: calc(100% - 30px);
     height: 40px;
-    padding: 0 10px;
+    padding: 0 15px;
     border: 0 solid #ddd;
     border-width: 1px 0px;
 }
@@ -43,7 +44,7 @@ form.search-form #search-box {
 div.results {
     padding: 0;
     overflow-y: auto;
-    height: 470px;
+    height: 594px;
     margin-bottom: 0;
     border: 0 solid #ddd;
     border-top-width: 1px;
@@ -56,4 +57,8 @@ div.result {
 
 div.result span.result-verse-number {
     font-weight: 600;
+}
+
+div.loading {
+    padding: 15px;
 }
