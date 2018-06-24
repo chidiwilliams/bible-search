@@ -1,12 +1,10 @@
 <template>
   <section class="body">
     <form action="#" class="search-form" v-on:submit.prevent>
-      <input type="text" id="search-box" v-model="query" placeholder="Please enter text" :disabled="!completed">
+      <input type="text" id="search-box" v-model="query" placeholder="Please enter text">
     </form>
 
     <div class="results">
-      <div v-if="loading" class="loading">Loading...</div>
-      
       <div v-for="result in results" class="result" v-bind:key="result.id">
         <span class="result-verse-number">{{ formatVerse(result.id) }}</span>
         <span class="result-verse">{{ result.verse }}</span>
@@ -24,17 +22,12 @@ export default {
   data () {
     return {
       elastic: null,
-      completed: false,
       query: '',
-      noLoad: false,
-      results: [],
-      loading: false
+      results: []
     }
   },
-  created() {    
-    this.loading = true
-
-    this.debouncedQueryData = _.debounce(this.queryData, 400);
+  created() {
+    this.debouncedQueryData = _.debounce(this.queryData, 200);
 
     this.elastic = elasticlunr(function () {
       this.addField('verse');
@@ -55,9 +48,6 @@ export default {
 
         this.elastic.addDoc({ id, verse })
       });
-
-      this.loading = false;
-      this.completed = true;
     },
     formatVerse(verseId) {
       var verseIdString = verseId.toString();
@@ -70,17 +60,14 @@ export default {
 
       return book + ' ' + chapterNo + ':' + verseNo;
     },
-    
     queryData() {
-      var results = this.elastic.search(this.query, {
+      var q_results = this.elastic.search(this.query, {
         expand: true
-      });
-      
-      results = results.slice(0, 10);
+      }).slice(0, 10);
 
       this.results = [];
-      results.forEach(result => {
-        this.results.push(this.elastic.documentStore.getDoc(result.ref))
+      q_results.forEach(q_result => {
+        this.results.push(this.elastic.documentStore.getDoc(q_result.ref))
       });
     }
   },

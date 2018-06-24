@@ -12,7 +12,7 @@
     "lint": "echo \"No linting configured\""
   },
   "keywords": [],
-  "author": "HP",
+  "author": "Chidi Williams",
   "license": "MIT",
   "config": {
     "forge": {
@@ -29,7 +29,10 @@
         ]
       },
       "electronPackagerConfig": {
-        "packageManager": "npm"
+        "packageManager": "npm",
+        "win32metadata": {
+          "ProductName": "Bible Search"
+        }
       },
       "electronWinstallerConfig": {
         "name": "bible_search"
