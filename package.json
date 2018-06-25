@@ -29,14 +29,9 @@
         ]
       },
       "electronPackagerConfig": {
-        "icon": "./src/img/icon/bible-search.ico",
-        "packageManager": "npm",
-        "win32metadata": {
-          "ProductName": "Bible Search"
-        }
+        "icon": "./src/img/icon/bible-search.ico"
       },
       "electronWinstallerConfig": {
-        "name": "Bible Search",
         "setupIcon": "./src/img/icon/bible-search.ico"
       },
       "electronInstallerDebian": {},
@@ -44,10 +39,6 @@
       "github_repository": {
         "owner": "",
         "name": ""
-      },
-      "windowsStoreConfig": {
-        "packageName": "",
-        "name": "biblesearch"
       }
     }
   },
