@@ -15,9 +15,9 @@ const createWindow = async () => {
   mainWindow = new BrowserWindow({
     width: 700,
     height: 700,
+    icon: __dirname + '/img/icon/bible-search.png',
     resizable: false,
     title: 'Bible Search',
-    icon: 'img/icon/bible-search.png'
   });
 
   // and load the index.html of the app.

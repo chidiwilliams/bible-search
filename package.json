@@ -2,7 +2,7 @@
   "name": "bible-search",
   "productName": "Bible Search",
   "version": "1.0.0",
-  "description": "Lightning-fast search through the KJV Bible",
+  "description": "Search-as-you-type through the KJV Bible",
   "main": "src/index.js",
   "scripts": {
     "start": "electron-forge start",
@@ -29,13 +29,15 @@
         ]
       },
       "electronPackagerConfig": {
+        "icon": "./src/img/icon/bible-search.ico",
         "packageManager": "npm",
         "win32metadata": {
           "ProductName": "Bible Search"
         }
       },
       "electronWinstallerConfig": {
-        "name": "bible_search"
+        "name": "Bible Search",
+        "setupIcon": "./src/img/icon/bible-search.ico"
       },
       "electronInstallerDebian": {},
       "electronInstallerRedhat": {},
